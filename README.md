@@ -161,5 +161,36 @@ Before running the project, make sure you have the following installed on your s
 
    ```bash
    npm install
-   
 
+## Setting Up Environment Variables
+
+Before running the project, you'll need to set up your environment variables. Follow these steps:
+
+Create a new file in the root directory of the project and name it `.env.`
+
+Copy the contents from `.env.example` into the newly created `.env` file.
+
+Now, open the .env file with a text editor of your choice and provide the required values for each environment variable as specified in the comments.
+
+- For example:
+
+   ```bash
+   MY_USERNAME=seunome
+   MY_PASSWORD=suasenha
+   DB_URL=mymongodbcluster.randomletters
+
+Replace `seunome`, `suasenha`, and `mymongodbcluster.randomletters` with your actual credentials and database connection URL.
+
+Once you've set up the environment variables in the `.env` file, you can proceed with running the project:
+
+### Running the Project
+
+- After setting up the environment variables in the `.env` file, you can run the project by executing the following command in the terminal:
+
+   ```bash
+   npm run dev
+
+- This command will start the development server, and you should see output indicating that the server is running on a specific port. Now, you can access the application by navigating to `http://localhost:5000` in your web browser.
+
+
+  
