@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import Pet from "../models/pet.model";
 import Tutor from "../models/tutor.model";
+import mongoose from "mongoose";
+
 
 export const createPet = async (req: Request, res: Response) => {
   try {
@@ -24,23 +26,35 @@ export const createPet = async (req: Request, res: Response) => {
 
     res.status(201).json(pet);
   } catch (error) {
-    console.error("Error while creating pet:", error);
     res.status(500).json({ message: "Error while creating pet" });
   }
 };
 
 export const updatePet = async (req: Request, res: Response) => {
   try {
-    const { petId, tutorId } = req.params;
-    const pet = await Pet.findOneAndUpdate(
-      { _id: petId, tutor: tutorId },
+    const { petId } = req.params;
+
+    const isValidObjectId = mongoose.Types.ObjectId.isValid(petId);
+
+    if (!isValidObjectId) {
+      return res.status(400).json({ message: "Invalid petId" });
+    }
+
+    const updatedPet = await Pet.findByIdAndUpdate(
+      petId,
       req.body,
       { new: true }
     );
-    if (!pet) {
+
+    if (!updatedPet) {
       return res.status(404).json({ message: "Pet not found" });
     }
-    res.status(200).json(pet);
+
+    const petWithoutInternalFields = updatedPet.toObject();
+    delete petWithoutInternalFields._id;
+    delete petWithoutInternalFields.__v;
+
+    res.status(200).json(petWithoutInternalFields);
   } catch (error) {
     res.status(500).json({ message: "Error while updating pet" });
   }
