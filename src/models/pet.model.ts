@@ -1,6 +1,6 @@
 import { Schema, model, Document } from 'mongoose';
 
-export interface IPet extends Document {
+export interface Pet extends Document {
   id: number;
   name: string;
   species: string;
@@ -18,4 +18,4 @@ const petSchema = new Schema({
   date_of_birth: { type: String, required: true },
 });
 
-export default model<IPet>('Pet', petSchema);
+export default model<Pet>('Pet', petSchema);

@@ -10,7 +10,7 @@
     "esModuleInterop": true,
     "types": ["node", "dotenv"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"],
   "ts-node": {
     "files": true
