@@ -1,14 +1,14 @@
-import { Schema, model, Document, Types } from "mongoose";
-import { IPet } from "./pet.model";
+import { Schema, model, Document } from "mongoose";
+import { Pet } from "./pet.model";
 
-interface ITutor extends Document {
+export interface Tutor extends Document {
   id: number;
   name: string;
   phone: string;
   email: string;
   date_of_birth: string;
   zip_code: string;
-  pets: Types.Array<IPet>;
+  pets: Array<Pet>;
 }
 
 const tutorSchema = new Schema({
@@ -21,4 +21,4 @@ const tutorSchema = new Schema({
   pets: [{ type: Schema.Types.ObjectId, ref: "Pet" }],
 });
 
-export default model<ITutor>("Tutor", tutorSchema);
+export default model<Tutor>("Tutor", tutorSchema);
