@@ -20,7 +20,7 @@ that the client has.
 3. Express
 4. Mongoose
 5. MongoDB
-6. Insomnia
+6. Postman
 
 ## Pre-requisites
 
@@ -80,6 +80,25 @@ Once you've set up the environment variables in the `.env` file, you can proceed
 
 - This command will start the development server, and you should see output indicating that the server is running on a specific port. 
 
+## Testing the API with Postman
+
+1. Make sure you have [Postman](https://www.postman.com/downloads/) installed on your machine.
+
+2. Download the Postman collection JSON file from this repository. You can find the file in the [postman](./postman) directory.
+
+3. Import the Postman collection into Postman by following these steps:
+   - Open Postman.
+   - Click on the "Import" button in the top-left corner.
+   - Choose the "File" tab and select the downloaded JSON file.
+   - The collection will be imported, and you should see it in the left sidebar under the "Collections" tab.
+
+4. Before running the API requests, ensure that the development server is up and running locally. If not, follow the ["How to Run Locally"](https://github.com/devartes/challenge-01-ana-carolina-duarte-cavalcante/edit/main/README.md#how-to-run-locally) and ["Setting Up Environment Variables"](https://github.com/devartes/challenge-01-ana-carolina-duarte-cavalcante/edit/main/README.md#setting-up-environment-variables) sections in this README to start the server.
+
+5. Now you can start testing the API endpoints using the imported Postman collection. Each request is pre-configured with the required headers and data.
+
+6. For the requests that require specific data (e.g., POST and PUT requests), make sure to update the request body with valid data before sending the request.
+
+7. Send the requests and check the responses to verify the API functionality.
 
 ## Features
 
@@ -137,7 +156,7 @@ The API will have the following features:
    }
 
 6. **DELETE /tutor/:id**: Deletes a tutor.
-7. 
+ 
    Status Code: 200
 
 8. **POST /pet/:tutorId**: Creates a new pet and associates it with a tutor.
@@ -163,7 +182,7 @@ The API will have the following features:
        "species": "dog",
        "carry": "p",
        "weight": 5,
-       "date_of_birth": "1993-12-12 10:10",
+       "date_of_birth": "1993-12-12 10:10"
     }
 
 9. **DELETE /pet/:petId/tutor/:tutorId**: Removes a pet from a tutor.
