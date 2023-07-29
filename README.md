@@ -92,7 +92,7 @@ Once you've set up the environment variables in the `.env` file, you can proceed
    - Choose the "File" tab and select the downloaded JSON file.
    - The collection will be imported, and you should see it in the left sidebar under the "Collections" tab.
 
-4. Before running the API requests, ensure that the development server is up and running locally. If not, follow the ["How to Run Locally"](https://github.com/devartes/challenge-01-ana-carolina-duarte-cavalcante/edit/main/README.md#how-to-run-locally) and ["Setting Up Environment Variables"](https://github.com/devartes/challenge-01-ana-carolina-duarte-cavalcante/edit/main/README.md#setting-up-environment-variables) sections in this README to start the server.
+4. Before running the API requests, ensure that the development server is up and running locally. If not, follow the "How to Run Locally" and "Setting Up Environment Variables" sections in this README to start the server.
 
 5. Now you can start testing the API endpoints using the imported Postman collection. Each request is pre-configured with the required headers and data.
 
