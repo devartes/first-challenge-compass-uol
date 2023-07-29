@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "917893f2-6bc0-432f-84fb-fbe4f0064783",
+		"name": "compassuol",
+		"description": "<img src=\"https://content.pstmn.io/823a77bb-f010-41a1-a981-79f3f858ae07/Y29tcGFzcy1sb2dvLnN2Zw==\" width=\"255\" height=\"94\">\n\n# Challenge #01 - Node - VetClinic\n\n## Description\n\nA client hired Compass to build a new microservice for its veterinary franchise. This microservice will be used by all the clinics they own for internal client and attendances management. So, you have this new mission, to build the POC foundations of this brand new microservice, so the sales and management team can have the primary technical view of the needs that the client has.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27625958"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/tutor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\": 1,\r\n \"name\": \"Jonas\",\r\n \"phone\": \"85989323895\",\r\n \"email\": \"jonas@paidepet.com\",\r\n \"date_of_birth\": \"1993-12-12 10:10\",\r\n \"zip_code\": \"61760000\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/tutor"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/tutors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/tutors"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/tutor/:id:",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"hallex\",\r\n    \"phone\": \"85989323895\",\r\n    \"email\": \"jose.abreu@compasso.com\",\r\n    \"date_of_birth\": \"1993-12-12 10:10\",\r\n    \"zip_code\": \"61760000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/tutor/64c4f02ac482ec49d4504f25"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/pet/:tutorId:",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Lilo\",\r\n  \"species\": \"dog\",\r\n  \"carry\": \"p\",\r\n  \"weight\": 5,\r\n  \"date_of_birth\": \"1993-12-12 10:10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/pet/64c4f242c482ec49d4504f3e"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/pet/:petId/tutor/:tutorId:",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Flor\",\r\n  \"species\": \"dog\",\r\n  \"carry\": \"p\",\r\n  \"weight\": 5,\r\n  \"date_of_birth\": \"1993-12-12 10:10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/pet/64c4f0f1c482ec49d4504f29/tutor/64c4f02ac482ec49d4504f25"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/tutor/:id:",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/tutor/64c4f02ac482ec49d4504f25"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/pet/64c4f256c482ec49d4504f40/tutor/64c4f242c482ec49d4504f3e",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Flor\",\r\n  \"species\": \"dog\",\r\n  \"carry\": \"p\",\r\n  \"weight\": 5,\r\n  \"date_of_birth\": \"1993-12-12 10:10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/pet/64c4f256c482ec49d4504f40/tutor/64c4f242c482ec49d4504f3e"
+			},
+			"response": []
+		}
+	]
+}
