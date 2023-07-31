@@ -1,4 +1,17 @@
 <div align="center">
+
+  
+| Nome     |      Email    |
+|----------|:-------------:|
+| Ana Carolina Duarte Cavalcante |   ana.cavalcante.pb@compasso.com.br |
+  
+</div>
+
+
+---------------------------------------------------------------------
+
+
+<div align="center">
 <a href="/">
   <img src="https://stc.uol.com/g/sobreuol/images/footer/compass-logo.svg?v=3.9.44" alt="compassuol" width="200">
 </a>
